@@ -1,0 +1,267 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    } 
+    
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 50px;
+      background: black;
+      border-bottom: 1px solid black;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo {
+      
+      color: white;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    header nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: rgb(239, 170, 42);
+    }
+
+    /* Hero Image (2/3 экрана) */
+    .hero {
+      height: 66vh; /* 2/3 от высоты окна */
+      background: url("backgrounbd\ .jpg") no-repeat center center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Белый блок с текстом */
+    .content-box {
+      background: #fff;
+      padding: 40px 60px;
+      width: 70%;
+      max-width: 900px;
+      margin: -80px auto 40px auto; /* "поднимаем" блок на фон */
+      text-align: center;
+     
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 5;
+    }
+    .content-box::before {
+      content: "";
+      position: absolute;
+      top: 20px;   /* отступ сверху */
+      left: 20px;  /* отступ слева */
+      right: 20px; /* отступ справа */
+      bottom: 20px;/* отступ снизу */
+      border: 2px solid #a3a3a3; /* золотая рамка */
+      pointer-events: none;
+    }
+
+    .content-box h1 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .content-box p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* 3 photos */ 
+ .photo-gallery {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 900px;
+  margin: 30px auto 60px auto;
+  gap: 2%;
+}
+
+.photo-item {
+  position: relative;
+  width: 32%;       
+  height: 350px; 
+    /* фиксированная высота для всех фото */
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;      /* теперь совпадает с высотой блока */
+  object-fit: cover; 
+  border-radius: 1px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 6px;       
+  left: 6px;      
+  right: 6px;     
+  bottom: 6px;    
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  border-radius: 1px;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+ #url {
+    color: wheat;
+}
+
+.photo-item:hover .overlay {
+  opacity: 1;
+}
+
+
+
+/* Footer */
+
+ footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 70px;
+  background: #111;
+  color: white;
+  flex-wrap: wrap; /* чтобы на маленьких экранах элементы переносились */
+  gap: 30px;
+    flex-wrap: nowrap;   
+}
+
+.footer-left {
+  max-width: 500px;
+  margin-left:  300px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-left h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  
+}
+.footer-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  
+}
+
+.social-icons a {
+  margin-left: 1px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+.footer-right {
+  width: 50%; /* правая часть с поиском занимает вторую половину */
+  display: flex;
+  justify-content: flex-end; /* выравниваем поиск справа */
+}
+
+.search-form {
+  width: 100%; /* форма занимает всю правую половину */
+  display: flex;
+}
+
+.search-form input {
+  flex: 1;               /* input занимает максимально возможную ширину */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-form button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background: #f3a712;
+  color: #111;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background: #e5940a;
+}
+
+
+
+
+
+
+
+
+
+.search-form button:hover {
+  background: #e5940a;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-right {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .search-form input {
+    width: 50%;
+  }
+}
